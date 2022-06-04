@@ -2,14 +2,13 @@ import { MyPage } from "../AbstractFactory/MyPage/MyPage.js";
 import { BootstrapPage } from "../AbstractFactory/BootstrapPage/BootstrapPage.js";
 import { DOM } from "../DOM.js";
 
-import { PAGE_PARAMS, STYLE, INIT_STYLE } from "../../config/config.js";
+import { PAGE_PARAMS, STYLE, INIT_STYLE, MY_STYLE, BOOTSTRAP_STYLE, BOOTSTRAP_JS } from "../../config/config.js";
 
 const Singleton = (function () {
     let instance = null;
+    let isFirstInit = true;
 
     let header, main, footer;
-
-    let isFirstInit = true;
 
     function getInstance() {
         if (instance) {
@@ -32,9 +31,14 @@ const Singleton = (function () {
         switch (style) {
             case INIT_STYLE.bootstrap:
                 page = new BootstrapPage(PAGE_PARAMS);
+
+                DOM.includeCSS(BOOTSTRAP_STYLE);
+                DOM.includeJS(BOOTSTRAP_JS);
                 break;
             default:
-                page = new MyPage(PAGE_PARAMS);
+                page = new MyPage(PAGE_PARAMS)
+
+                DOM.includeCSS(MY_STYLE);
                 break;
         }
 
