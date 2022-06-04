@@ -1,0 +1,40 @@
+div.news,
+div.user,
+form {
+    border: 1px solid gray;
+    margin: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+div.news div.photo,
+div.user div.photo {
+    float: left;
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+    overflow: hidden;
+}
+div.news div.photo img,
+div.user div.photo img {
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+}
+div.news div.content,
+div.user div.content {
+    margin-left: 150px;
+    padding-left: 10px;
+}
+div.news div.content div.title,
+div.user div.content div.title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom:10px;
+}
+div.news div.photo img {
+    width: 100%;
+}
+
+div.user div.photo {
+    background-color: cornsilk;
+}
