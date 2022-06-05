@@ -15,7 +15,12 @@ const Singleton = (function () {
             return instance;
         }
 
-        instance = { init, getHeader, getMain, getFooter };
+        instance = {
+            init,
+            getHeader, getMain, getFooter,
+            clientFactoryMethod, clientFactoryMethodGet, clientCreatePage
+        };
+
         return instance;
     }
 
@@ -56,6 +61,14 @@ const Singleton = (function () {
 
     function getFooter() {
         return footer;
+    }
+
+    function clientFactoryMethod(creator, params) {
+        creator.createAndAppendTo(main, params);
+    }
+
+    function clientFactoryMethodGet(creator, params) {
+        return creator.getElement(params);
     }
 
     function clientCreatePage(page) {
