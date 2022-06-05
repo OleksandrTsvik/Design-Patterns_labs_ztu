@@ -38,3 +38,19 @@ div.news div.photo img {
 div.user div.photo {
     background-color: cornsilk;
 }
+
+div.nav[role="tablist"] a.nav-link {
+    text-align: center;
+}
+div.nav[role="tablist"] a.nav-link:not(.active) {
+    color: #262626;
+    background-color: #BBDEFB;
+}
+div.nav.nav-tabs[role="tablist"] a.nav-link.active {
+    color: black;
+    background-color: #E8EAF6;
+}
+div.nav.nav-pills[role="tablist"] a.nav-link.active {
+    color: white;
+    background-color: #3F51B5;
+}

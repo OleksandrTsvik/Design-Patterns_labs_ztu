@@ -17,6 +17,7 @@ nav.my-nav ul {
     font-size: 0;
     word-spacing: 0;
     padding: 0;
+    margin: 0;
 }
 nav.my-nav ul li {
     display: inline-block;
