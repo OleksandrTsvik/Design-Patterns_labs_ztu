@@ -32,23 +32,35 @@ export class DOM {
         let elemInclude = DOM.query('head');
 
         if (href instanceof Array) {
-            href.forEach((link) => {
+            href.forEach((param) => {
                 let attr = {};
 
-                if (link !== null && typeof link === 'object') {
-                    attr = link;
+                if (param !== null && typeof param === 'object') {
+                    if (DOM.query(`link[href="${param.href}"]`)) {
+                        return;
+                    }
+
+                    attr = param;
                 } else {
-                    attr.href = link;
+                    if (DOM.query(`link[href="${param}"]`)) {
+                        return;
+                    }
+
+                    attr.href = param;
                 }
 
                 attr.rel = 'stylesheet';
 
                 elemInclude.append(DOM.tag({
                     name: 'link',
-                    attributes: { ...attr }
+                    attributes: attr
                 }));
             });
         } else {
+            if (DOM.query(`link[href="${href}"]`)) {
+                return;
+            }
+
             elemInclude.append(DOM.tag({
                 name: 'link',
                 attributes: {
@@ -63,22 +75,34 @@ export class DOM {
         let elemInclude = DOM.query('head');
 
         if (src instanceof Array) {
-            src.forEach((link) => {
+            src.forEach((param) => {
                 let attr = {};
 
-                if (link !== null && typeof link === 'object') {
-                    attr = link;
+                if (param !== null && typeof param === 'object') {
+                    if (DOM.query(`script[src="${param.src}"]`)) {
+                        return;
+                    }
+
+                    attr = param;
                 } else {
-                    attr.src = src;
+                    if (DOM.query(`script[src="${param}"]`)) {
+                        return;
+                    }
+
+                    attr.src = param;
                     attr.defer = '';
                 }
 
                 elemInclude.append(DOM.tag({
                     name: 'script',
-                    attributes: { ...attr }
+                    attributes: attr
                 }));
             });
         } else {
+            if (DOM.query(`script[src="${src}"]`)) {
+                return;
+            }
+
             elemInclude.append(DOM.tag({
                 name: 'script',
                 attributes: {
