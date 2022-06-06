@@ -40,19 +40,25 @@ export function runComposite() {
     let container02Flex01 = new ContainerFlex('flex-column');
 
     let container02Flex02 = new ContainerFlex();
-    container02Flex02.add(new NodeFlex('Логін', 'flex-fill form-label p-2 px-3 m-0 border bg-light', 'label', {for: 'con02f-login'}));
-    container02Flex02.add(new NodeFlex('Пароль', 'flex-fill form-label p-2 m-0 border bg-light', 'label', {for: 'con02f-pass'}));
+    container02Flex02.add(new NodeFlex('Авторизація', 'text-center flex-fill p-3 border bg-light', 'h3'));
 
     let container02Flex03 = new ContainerFlex();
-    container02Flex03.add(new NodeFlex('', 'flex-fill form-control border', 'input', {id: 'con02f-login'}));
-    container02Flex03.add(new NodeFlex('', 'flex-fill form-control border', 'input', {id: 'con02f-pass'}));
+    container02Flex03.add(new NodeFlex('Логін', 'flex-fill form-label p-2 px-3 m-0 border bg-light', 'label', {for: 'con02f-login'}));
+    container02Flex03.add(new NodeFlex('Пароль', 'flex-fill form-label p-2 m-0 border bg-light', 'label', {for: 'con02f-pass'}));
 
-    let container02Flex04 = new ContainerFlex('justify-content-center');
-    container02Flex04.add(new NodeFlex('Submit', 'btn btn-primary w-25 mt-2', 'button'));
+    let container02Flex04 = new ContainerFlex();
+    container02Flex04.add(new NodeFlex('', 'flex-fill form-control border', 'input', {id: 'con02f-login'}));
+    container02Flex04.add(new NodeFlex('', 'flex-fill form-control border', 'input', {id: 'con02f-pass'}));
+
+    let container02Flex05 = new ContainerFlex('justify-content-center');
+    container02Flex05.add(new NodeFlex('Submit', 'btn btn-primary w-25 mt-2', 'button'));
 
     container02Flex01.add(container02Flex02);
     container02Flex01.add(container02Flex03);
     container02Flex01.add(container02Flex04);
+    container02Flex01.add(container02Flex05);
+
+    // container02Flex01.remove(container02Flex02);
 
     wrapper.append(
         getTitle('Container Flex #01'), container01Flex01.build(),
