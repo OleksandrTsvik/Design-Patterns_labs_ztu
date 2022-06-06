@@ -137,8 +137,8 @@ export class DOM {
         };
 
         elem.addClass = (classes) => {
-            if (typeof classes === 'string') {
-                elem.classList.add(...classes.split(' '));
+            if (typeof classes === 'string' && classes.trim().length > 0) {
+                elem.classList.add(...classes.split(' ').filter(cls => cls.length > 0));
             } else if (classes instanceof Array) {
                 elem.classList.add(...classes);
             }
