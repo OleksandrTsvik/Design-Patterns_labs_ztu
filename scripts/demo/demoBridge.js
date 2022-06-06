@@ -3,8 +3,13 @@ import { VerticalTabs } from "../library/Bridge/Tabs/VerticalTabs.js";
 import { Button } from "../library/Bridge/Buttons/Button.js";
 import { Link } from "../library/Bridge/Buttons/Link.js";
 import { Core } from "../library/Singleton/Core.js";
+import {DOM} from "../library/DOM.js";
+import { BOOTSTRAP_JS, BOOTSTRAP_STYLE } from "../config/config.js";
 
 export function runBridge() {
+    DOM.includeCSS(BOOTSTRAP_STYLE);
+    DOM.includeJS(BOOTSTRAP_JS);
+
     let horizontalTabs01 = new HorizontalTabs([
         {
             text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, aliquid amet assumenda dolor eligendi eum itaque laborum laudantium libero numquam quasi quia quis, rem tempore voluptates. Ad asperiores dignissimos eveniet?',

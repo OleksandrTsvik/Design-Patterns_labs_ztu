@@ -1,7 +1,9 @@
-import { runDemoBuilder } from "./DemoBuilder.js";
-import { runDemoFactoryMethod } from "./DemoFactoryMethod.js";
-import { runPrototype } from "./DemoPrototype.js";
-import { runBridge } from "./DemoBridge.js";
+import { runDemoBuilder } from "./demoBuilder.js";
+import { runDemoFactoryMethod } from "./demoFactoryMethod.js";
+import { runPrototype } from "./demoPrototype.js";
+import { runBridge } from "./demoBridge.js";
+import { runAdapter } from "./demoAdapter.js";
+import { runComposite } from "./demoComposite.js";
 
 export class Demo {
     demoBuilder() {
@@ -18,5 +20,13 @@ export class Demo {
 
     demoBridge() {
         runBridge();
+    }
+
+    demoAdapter() {
+        runAdapter();
+    }
+
+    demoComposite() {
+        runComposite();
     }
 }
