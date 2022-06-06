@@ -10,3 +10,5 @@ demo.demoBuilder();
 demo.demoFactoryMethod();
 demo.demoPrototype();
 demo.demoBridge();
+demo.demoAdapter();
+demo.demoComposite();
