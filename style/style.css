@@ -54,3 +54,7 @@ div.nav.nav-pills[role="tablist"] a.nav-link.active {
     color: white;
     background-color: #3F51B5;
 }
+div.swiper,
+div.swiper div.swiper-wrapper div.swiper-slide img {
+    max-width: 100%;
+}

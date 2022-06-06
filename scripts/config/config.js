@@ -36,4 +36,11 @@ const BOOTSTRAP_JS = [
     }
 ];
 
-export { PAGE_PARAMS, STYLE, MY_STYLE, BOOTSTRAP_STYLE, BOOTSTRAP_JS, INIT_STYLE };
+const SWIPER_STYLE = '/alien/swiper/swiper-bundle.min.css';
+
+export {
+    PAGE_PARAMS, INIT_STYLE,
+    STYLE, MY_STYLE,
+    BOOTSTRAP_STYLE, BOOTSTRAP_JS,
+    SWIPER_STYLE
+};
