@@ -1,4 +1,4 @@
-import { Core } from "./library/Singleton/Core.js";
+import { Core } from "./library/Creational Patterns/Singleton/Core.js";
 import { Demo } from "./demo/Demo.js";
 import { INIT_STYLE } from "./config/config.js";
 
