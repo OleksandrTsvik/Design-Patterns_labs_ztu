@@ -7,7 +7,7 @@ export class DOM {
         element.addClass(params.class);
         element.attr(params.attributes);
 
-        if (typeof params.content === 'string') {
+        if (typeof params.content === 'string' || typeof params.content === 'number') {
             element.innerHTML = params.content;
         } else if (params.content instanceof Array) {
             params.content.forEach((elem) => element.appendChild(elem));
