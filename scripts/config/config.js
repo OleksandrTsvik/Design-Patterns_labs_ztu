@@ -27,6 +27,8 @@ const BOOTSTRAP_STYLE = [
     }
 ];
 
+const BOOTSTRAP_ICONS = 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css';
+
 const BOOTSTRAP_JS = [
     {
         src: 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js',
@@ -38,9 +40,12 @@ const BOOTSTRAP_JS = [
 
 const SWIPER_STYLE = '/alien/swiper/swiper-bundle.min.css';
 
+const HEIGHT_YT_VIDEO = 500;
+
 export {
     PAGE_PARAMS, INIT_STYLE,
     STYLE, MY_STYLE,
-    BOOTSTRAP_STYLE, BOOTSTRAP_JS,
-    SWIPER_STYLE
+    BOOTSTRAP_STYLE, BOOTSTRAP_JS, BOOTSTRAP_ICONS,
+    SWIPER_STYLE,
+    HEIGHT_YT_VIDEO
 };
