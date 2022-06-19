@@ -58,3 +58,18 @@ div.swiper,
 div.swiper div.swiper-wrapper div.swiper-slide img {
     max-width: 100%;
 }
+
+table.table.flyweight tr,
+table.table.flyweight td {
+    border-collapse: collapse;
+    border: 1px solid #E0E0E0 !important;
+}
+table.table.flyweight td {
+    text-align: center;
+}
+table.table.flyweight td div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
