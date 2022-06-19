@@ -18,7 +18,8 @@ const Singleton = (function () {
         instance = {
             init,
             getHeader, getMain, getFooter,
-            clientFactoryMethod, clientFactoryMethodGet, clientCreatePage
+            clientFactoryMethod, clientFactoryMethodGet, clientCreatePage,
+            addCaption
         };
 
         return instance;
@@ -76,6 +77,14 @@ const Singleton = (function () {
         header = page.createHeader().render();
         main = page.createMain().render();
         footer = page.createFooter().render();
+    }
+
+    function addCaption(caption) {
+        main.append(DOM.tag({
+            name: 'h2',
+            class: 'bg-dark text-light text-center shadow rounded w-75 mt-4 mb-3 mx-auto p-3',
+            content: caption
+        }));
     }
 
     return { getInstance };
