@@ -73,3 +73,20 @@ table.table.flyweight td div {
     justify-content: center;
     flex-direction: column;
 }
+
+textarea.textarea {
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    word-spacing: 2px;
+    width: 100%;
+    min-height: 400px;
+    outline: none;
+    overflow: paged-y;
+    resize: vertical;
+    padding: 5px 0 10px 5px;
+    border: 3px solid #222222;
+}
+textarea.textarea:focus {
+    border-color: #1976D2;
+}
