@@ -8,6 +8,8 @@ import { runDecorator } from "./Structural Patterns/demoDecorator.js";
 import { runFacade } from "./Structural Patterns/demoFacade.js";
 import { runFlyweight } from "./Structural Patterns/demoFlyweight.js";
 import { runProxy } from "./Structural Patterns/demoProxy.js";
+import { runChainOfResponsibility } from "./Behavioral Patterns/demoChainOfResponsibility.js";
+import { runCommandAndMemento } from "./Behavioral Patterns/demoCommandAndMemento.js";
 
 export class Demo {
     demoBuilder() {
@@ -48,5 +50,13 @@ export class Demo {
 
     demoProxy() {
         runProxy();
+    }
+
+    demoChainOfResponsibility() {
+        runChainOfResponsibility();
+    }
+
+    demoCommandAndMemento() {
+        runCommandAndMemento();
     }
 }

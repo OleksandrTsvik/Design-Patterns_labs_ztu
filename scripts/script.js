@@ -13,7 +13,10 @@ let demo = new Demo();
 // demo.demoAdapter();
 // demo.demoComposite();
 
-demo.demoDecorator();
-demo.demoFacade();
-demo.demoFlyweight();
-demo.demoProxy();
+// demo.demoDecorator();
+// demo.demoFacade();
+// demo.demoFlyweight();
+// demo.demoProxy();
+
+demo.demoChainOfResponsibility();
+demo.demoCommandAndMemento();
