@@ -10,6 +10,7 @@ import { runFlyweight } from "./Structural Patterns/demoFlyweight.js";
 import { runProxy } from "./Structural Patterns/demoProxy.js";
 import { runChainOfResponsibility } from "./Behavioral Patterns/demoChainOfResponsibility.js";
 import { runCommandAndMemento } from "./Behavioral Patterns/demoCommandAndMemento.js";
+import { runStrategy } from "./Behavioral Patterns/demoStrategy.js";
 
 export class Demo {
     demoBuilder() {
@@ -58,5 +59,9 @@ export class Demo {
 
     demoCommandAndMemento() {
         runCommandAndMemento();
+    }
+
+    demoStrategy() {
+        runStrategy();
     }
 }

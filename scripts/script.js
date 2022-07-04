@@ -20,3 +20,4 @@ let demo = new Demo();
 
 demo.demoChainOfResponsibility();
 demo.demoCommandAndMemento();
+demo.demoStrategy();
