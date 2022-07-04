@@ -90,3 +90,52 @@ textarea.textarea {
 textarea.textarea:focus {
     border-color: #1976D2;
 }
+
+#canvas {
+    border: 2px solid black;
+    background-color: white;
+}
+.shape {
+    width: 58px;
+    border: 4px solid transparent;
+}
+.shape.selected {
+    outline: 4px solid black;
+    border: 4px solid lightskyblue;
+    outline-offset: 0;
+}
+.outline-square,
+.circle, .square,
+.triangle, .diamond {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+.outline-square {
+    border: 2px solid red;
+    background-color: transparent;
+}
+.circle {
+    clip-path: circle(50% at 50% 50%);
+}
+.square {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.diamond {
+    height: 70px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+.eraser {
+    font-size: 50px;
+    width: 50px;
+    color: black;
+}
+.color {
+    width: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: transparent;
+}
